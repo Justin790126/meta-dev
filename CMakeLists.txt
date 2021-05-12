@@ -128,6 +128,14 @@ target_link_libraries(talker ${catkin_LIBRARIES})
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
 
+set(DIST_DIR /usr/bin)
+
+install(TARGETS
+    talker
+    listener
+    DESTINATION ${DIST_DIR}
+ )
+
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
