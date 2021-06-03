@@ -27,6 +27,11 @@ inherit ros_superflore_generated
 ROS_CN = "ros_tutorials"
 ROS_BPN = "roscpp_tutorials"
 
+
+ROS_BUILDTOOL_DEPENDS = " \
+    catkin-native \
+"
+
 ROS_BUILD_DEPENDS = " \
     message-generation \
     roscpp \
@@ -34,9 +39,6 @@ ROS_BUILD_DEPENDS = " \
     std-msgs \
 "
 
-ROS_BUILDTOOL_DEPENDS = " \
-    catkin-native \
-"
 
 ROS_EXPORT_DEPENDS = " \
     message-runtime \
